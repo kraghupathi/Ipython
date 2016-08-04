@@ -91,7 +91,7 @@ or
 ipython3 notebook # (for Python 3.x versions)
 #+END_EXAMPLE
 The IPython Notebook dashboard will launch inside your default web browser. The page will resemble the screenshot below.
-[./t1_p11.jpg]
+[[./t1_p11.jpg]]
 Create a notebook by clicking the New Notebook button. The new
 notebook will resemble the screenshot below. Change the title of the
 notebook to “Tutorial1” by left clicking on “Untitled0” at the top of
