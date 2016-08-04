@@ -96,9 +96,7 @@ Create a notebook by clicking the New Notebook button. The new
 notebook will resemble the screenshot below. Change the title of the
 notebook to “Tutorial1” by left clicking on “Untitled0” at the top of
 the page.
-
-diagram
-
+[[./t1_p2.jpg]]
 The notebook is composed of cells. Every cell has a unique purpose depending upon its type. Each cell in the notebook is a Python code-cell by default. To change the type of the cell, use the first dropdown box in the toolbar (as seen below).
 
 Highlight the first cell by clicking on it. From the dropdown select
@@ -107,18 +105,13 @@ header. Press Shift+Enter to execute the current cell and move to the
 next one. If no cell exists below the current one, a new cell will be
 created. To insert a cell above or below the current cell, use the
 Insert menu.
-
-diagram
-
+[[./t1_p3.jpg]]
 Change the next cell to a “Markdown” cell type. This type is used to create rich text in the notebook (as seen below). To learn more about the Markdown syntax, visit http://daringfireball.net/projects/markdown/.
 
 Note: IPython supports a rich variation of Markdown. This variation allows latex equations to be entered directly into the markdown.
-
-diagram
-
+[[./t1_p4.jpg]]
 Pressing Shift+Enter will render the markdown (as seen below).
-
-diagram
+[[./t1_p5.jpg]]
 
 IPython has a set of magic commands that help the interactive programming process. Magic commands are prefixed with a single or double percent symbol. The pylab magic command automatically configures Python for plotting. Use the pylab magic command by entering the following into a code cell:
 
@@ -132,9 +125,7 @@ y =sin(x)
 plot(x, y)
 #+END_EXAMPLE
 The results will resemble the screenshot below.
-
-diagram
-
+[[./t1_p6.jpg]]
 * Sharing your Notebook
 
 There are many methods to share your notebooks. The two most common
@@ -156,3 +147,4 @@ or
 ipython3 nbconvert Tutorial1.ipynb --to html # (for Python 3.x versions)
 #+END_EXAMPLE
 An HTML file will be created with the name “Tutorial1.html”. Opening the HTML file in a web browser will yield the Tutorial1 notebook as shown below.
+[[./t1_p7.jpg]]
