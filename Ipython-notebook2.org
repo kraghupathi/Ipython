@@ -1,0 +1,160 @@
+* Installation
+The IPython Notebook is a component of IPython and is installed
+alongside IPython automatically. There are many different ways to
+install IPython. The officially supported methods can be found on
+IPython¡¯s website at http://ipython.org/install.html. IPython can be
+installed on Linux, Macintosh, and Windows operating systems. Single
+click installers are available and listed in the officially supported
+methods.
+
+There are, however, benefits to downloading and installing IPython
+from source. In my opinion, the greatest benefit is the ability to
+easily change the version of your installation. I will walk you
+through the process of downloading and installing IPython from
+scratch.
+
+* Step 1, Install Python
+Most Linux distributions come with Python pre-installed. To check if
+your system has Python already installed, try reading the current
+Python version. This can be done using the system terminal:
+#+BEGIN_EXAMPLE
+python --version
+#+END_EXAMPLE
+IPython 1.1 supports Python 2.6,2 .7, 3.2, and 3.3. If your system doesn¡¯t have Python installed, you can install it by running:
+#+BEGIN_EXAMPLE
+sudo apt-get update
+sudo apt-get install python
+#+END_EXAMPLE
+After Python is installed, you will need to install the Python setup tools and dev packages. This can be done by running the following commands in the system terminal:
+#+BEGIN_EXAMPLE
+sudo apt-get update
+sudo apt-get install python-dev python-setuptools
+#+END_EXAMPLE
+* Step 2, Installing IPython¡¯s dependencies
+IPython depends upon many open source packages. The notebook has additional dependencies. To install these, run the following in the system terminal:
+#+BEGIN_EXAMPLE
+sudo apt-get install pandoc
+sudo apt-get install libzmq-dev
+sudo apt-get install python-matplotlib
+sudo easy_install nose tornado jinja2 sphinx pyzmq
+#+END_EXAMPLE
+* Step 3, Download and install IPython
+The IPython source code is available on GitHub. To download the source
+code, your system must have Git installed. To check if Git is already
+installed on your machine, run the following command in the system
+terminal:
+#+BEGIN_EXAMPLE
+git --version
+#+END_EXAMPLE
+If the command above returns an error, Git is not installed. You can install Git by running the following:
+#+BEGIN_EXAMPLE
+sudo apt-get install git
+#+END_EXAMPLE
+Now you are ready to download IPython. Navigate to the directory where you would like IPython installed. Once you are there, download IPython by running the following:
+#+BEGIN_EXAMPLE
+git clone https://github.com/ipython/ipython.git
+#+END_EXAMPLE
+Git will create an =/ipython= subdirectory where all required files will
+reside. Once the download is complete, to begin the installation
+process, you must checkout the IPython version you want
+installed. This post targets version 1.1. You can checkout version 1.1
+files by running the following:
+#+BEGIN_EXAMPLE
+git checkout tags/rel-1.1.0
+#+END_EXAMPLE
+Note: Other versions are available to checkout. To view the latest developer code, which includes the experimental features, checkout master =(git checkout master)=.
+To install IPython, run the following:
+#+BEGIN_EXAMPLE
+sudo python setup.py install
+#+END_EXAMPLE
+* Step 4, Verify IPython installation
+Depending upon the version of Python installed (see step 1), the
+command used to launch the software differs. If Python 3.x is
+installed, the command to launch any IPython application is suffixed
+with a 3. If you have Python 2.x installed, the commands are not
+suffixed.
+
+Verify that the test suite executes without any errors. Run the test suite by using the following:
+#+BEGIN_EXAMPLE
+iptest
+#+END_EXAMPLE
+* Using the Notebook
+Now that IPython is installed, you will have to identify where you
+would like the notebooks you create to be saved. Navigate to that
+directory and launch the IPython Notebook. To launch the notebook, run
+the following:
+#+BEGIN_EXAMPLE
+ipython notebook # (for Python 2.x versions)
+#+END_EXAMPLE
+or 
+#+BEGIN_EXAMPLE
+ipython3 notebook # (for Python 3.x versions)
+#+END_EXAMPLE
+The IPython Notebook dashboard will launch inside your default web browser. The page will resemble the screenshot below.
+
+diagram
+
+Create a notebook by clicking the New Notebook button. The new
+notebook will resemble the screenshot below. Change the title of the
+notebook to ¡°Tutorial1¡± by left clicking on ¡°Untitled0¡± at the top of
+the page.
+
+diagram
+
+The notebook is composed of cells. Every cell has a unique purpose depending upon its type. Each cell in the notebook is a Python code-cell by default. To change the type of the cell, use the first dropdown box in the toolbar (as seen below).
+
+Highlight the first cell by clicking on it. From the dropdown select
+Heading 1. This will change the highlighted cell type to a level 1
+header. Press Shift+Enter to execute the current cell and move to the
+next one. If no cell exists below the current one, a new cell will be
+created. To insert a cell above or below the current cell, use the
+Insert menu.
+
+diagram
+
+Change the next cell to a ¡°Markdown¡± cell type. This type is used to create rich text in the notebook (as seen below). To learn more about the Markdown syntax, visit http://daringfireball.net/projects/markdown/.
+
+Note: IPython supports a rich variation of Markdown. This variation allows latex equations to be entered directly into the markdown.
+
+diagram
+
+Pressing Shift+Enter will render the markdown (as seen below).
+
+diagram
+
+IPython has a set of magic commands that help the interactive programming process. Magic commands are prefixed with a single or double percent symbol. The pylab magic command automatically configures Python for plotting. Use the pylab magic command by entering the following into a code cell:
+
+#+BEGIN_EXAMPLE
+%pylab inline
+#+END_EXAMPLE
+Execute the cell and the pylab magic will run. In another code cell, add and execute the following Python code to plot a segment of the sine function:
+#+BEGIN_EXAMPLE
+x =  linspace(0, 10)
+y =sin(x)
+plot(x, y)
+#+END_EXAMPLE
+The results will resemble the screenshot below.
+
+diagram
+
+* Sharing your Notebook
+
+There are many methods to share your notebooks. The two most common
+methods are to: use IPython¡¯s nbconvert to export the notebook as a
+redistributable format (one that can be rendered without IPython) or
+to upload and view it using IPython¡¯s nbviewer.
+
+* Exporting a Notebook
+
+Nbconvert can be used to export your newly created ¡°Tutorial1¡±
+notebook to an HTML document. To do this, first open a terminal window
+and navigate to the directory where ¡°Tutorial1¡± is saved. From this
+window, export the notebook by running the following command:
+#+BEGIN_EXAMPLE
+ipython nbconvert Tutorial1.ipynb --to html # (for Python 2.x versions)
+#+END_EXAMPLE
+or
+#+BEGIN_EXAMPLE
+ipython3 nbconvert Tutorial1.ipynb --to html # (for Python 3.x versions)
+#+END_EXAMPLE
+An HTML file will be created with the name ¡°Tutorial1.html¡±. Opening the HTML file in a web browser will yield the Tutorial1 notebook as shown below.
