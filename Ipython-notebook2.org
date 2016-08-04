@@ -2,7 +2,7 @@
 The IPython Notebook is a component of IPython and is installed
 alongside IPython automatically. There are many different ways to
 install IPython. The officially supported methods can be found on
-IPython°Øs website at http://ipython.org/install.html. IPython can be
+IPython‚Äôs website at http://ipython.org/install.html. IPython can be
 installed on Linux, Macintosh, and Windows operating systems. Single
 click installers are available and listed in the officially supported
 methods.
@@ -20,7 +20,7 @@ Python version. This can be done using the system terminal:
 #+BEGIN_EXAMPLE
 python --version
 #+END_EXAMPLE
-IPython 1.1 supports Python 2.6,2 .7, 3.2, and 3.3. If your system doesn°Øt have Python installed, you can install it by running:
+IPython 1.1 supports Python 2.6,2 .7, 3.2, and 3.3. If your system doesn‚Äôt have Python installed, you can install it by running:
 #+BEGIN_EXAMPLE
 sudo apt-get update
 sudo apt-get install python
@@ -30,7 +30,7 @@ After Python is installed, you will need to install the Python setup tools and d
 sudo apt-get update
 sudo apt-get install python-dev python-setuptools
 #+END_EXAMPLE
-* Step 2, Installing IPython°Øs dependencies
+* Step 2, Installing IPython‚Äôs dependencies
 IPython depends upon many open source packages. The notebook has additional dependencies. To install these, run the following in the system terminal:
 #+BEGIN_EXAMPLE
 sudo apt-get install pandoc
@@ -91,12 +91,10 @@ or
 ipython3 notebook # (for Python 3.x versions)
 #+END_EXAMPLE
 The IPython Notebook dashboard will launch inside your default web browser. The page will resemble the screenshot below.
-
-diagram
-
+[./t1_p11.jpg]
 Create a notebook by clicking the New Notebook button. The new
 notebook will resemble the screenshot below. Change the title of the
-notebook to °∞Tutorial1°± by left clicking on °∞Untitled0°± at the top of
+notebook to ‚ÄúTutorial1‚Äù by left clicking on ‚ÄúUntitled0‚Äù at the top of
 the page.
 
 diagram
@@ -112,7 +110,7 @@ Insert menu.
 
 diagram
 
-Change the next cell to a °∞Markdown°± cell type. This type is used to create rich text in the notebook (as seen below). To learn more about the Markdown syntax, visit http://daringfireball.net/projects/markdown/.
+Change the next cell to a ‚ÄúMarkdown‚Äù cell type. This type is used to create rich text in the notebook (as seen below). To learn more about the Markdown syntax, visit http://daringfireball.net/projects/markdown/.
 
 Note: IPython supports a rich variation of Markdown. This variation allows latex equations to be entered directly into the markdown.
 
@@ -140,15 +138,15 @@ diagram
 * Sharing your Notebook
 
 There are many methods to share your notebooks. The two most common
-methods are to: use IPython°Øs nbconvert to export the notebook as a
+methods are to: use IPython‚Äôs nbconvert to export the notebook as a
 redistributable format (one that can be rendered without IPython) or
-to upload and view it using IPython°Øs nbviewer.
+to upload and view it using IPython‚Äôs nbviewer.
 
 * Exporting a Notebook
 
-Nbconvert can be used to export your newly created °∞Tutorial1°±
+Nbconvert can be used to export your newly created ‚ÄúTutorial1‚Äù
 notebook to an HTML document. To do this, first open a terminal window
-and navigate to the directory where °∞Tutorial1°± is saved. From this
+and navigate to the directory where ‚ÄúTutorial1‚Äù is saved. From this
 window, export the notebook by running the following command:
 #+BEGIN_EXAMPLE
 ipython nbconvert Tutorial1.ipynb --to html # (for Python 2.x versions)
@@ -157,4 +155,4 @@ or
 #+BEGIN_EXAMPLE
 ipython3 nbconvert Tutorial1.ipynb --to html # (for Python 3.x versions)
 #+END_EXAMPLE
-An HTML file will be created with the name °∞Tutorial1.html°±. Opening the HTML file in a web browser will yield the Tutorial1 notebook as shown below.
+An HTML file will be created with the name ‚ÄúTutorial1.html‚Äù. Opening the HTML file in a web browser will yield the Tutorial1 notebook as shown below.
